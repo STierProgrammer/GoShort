@@ -7,9 +7,13 @@ import (
 	"os"
 
 	"github.com/stierprogrammer/goshort/internal/handlers"
+	"github.com/stierprogrammer/goshort/internal/storage"
 )
 
 func main() {
+	// Loads data from urls.json
+	storage.LoadData("urls.json");
+
 	// I put this on purpose, cause I wanted to see how envs worked in GO
 	port := os.Getenv("PORT");
 
